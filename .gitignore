@@ -5,6 +5,7 @@
 *.log
 *.out
 *.pdf
+!reports/*.pdf
 *.synctex.gz
 *.toc
 
