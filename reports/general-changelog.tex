@@ -107,5 +107,49 @@ how to deploy it to a new machine and configure the required hooks in \texttt{se
 \end{tabular}
 \end{center}
 
+% ──────────────────────────────────────────────────────────
+\subsection*{[2026-04-02] \texttt{96084cab} --- Allow reports/*.pdf to be tracked in git}
+
+\textbf{Author:} Nasim Faridnia (\texttt{seyedehnasim.faridnia@my.utsa.edu}) \\[0.3em]
+\textbf{Files changed:}
+\begin{itemize}
+  \item \texttt{.gitignore} --- Added negation rule to unignore \texttt{reports/*.pdf}
+\end{itemize}
+
+\vspace{0.3em}
+\textbf{Summary:} Updated \texttt{.gitignore} to add a negation exception \texttt{!reports/*.pdf},
+allowing compiled PDF reports in the \texttt{reports/} directory to be tracked by git while
+all other \texttt{*.pdf} files remain ignored. This enables the \texttt{/latex-report} skill
+to commit and push compiled report PDFs alongside their source \texttt{.tex} files.
+
+\vspace{0.5em}
+\textbf{Rule change:}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Rule} & \textbf{Effect} \\
+\midrule
+\texttt{*.pdf} & Ignore all PDF files \\
+\texttt{!reports/*.pdf} & Exception: track PDFs inside \texttt{reports/} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ──────────────────────────────────────────────────────────
+\subsection*{[2026-04-02] \texttt{8c0b3888} --- Update README with skill instructions and add initial report PDF}
+
+\textbf{Author:} Nasim Faridnia (\texttt{seyedehnasim.faridnia@my.utsa.edu}) \\[0.3em]
+\textbf{Files changed:}
+\begin{itemize}
+  \item \texttt{reports/general-changelog.pdf} --- Added initial compiled PDF of the changelog report (146\,KB)
+\end{itemize}
+
+\vspace{0.3em}
+\textbf{Summary:} Committed the first compiled PDF of \texttt{general-changelog.tex} to the
+repository. This is the initial version of the report covering all commits from project
+inception through the \texttt{.gitignore} and README updates. The PDF is now tracked in git
+and will be updated automatically by the \texttt{/latex-report} skill on each subsequent run.
+
 \end{document}
-% LATEX-REPORT-STATE: {"last_commit": "fdc380f3adbd6d1289defbca4a79ee666ae11930", "repo": "https://github.com/NassimF/latex-test-report", "updated": "2026-04-02"}
+% LATEX-REPORT-STATE: {"last_commit": "8c0b388857b736654da6dee5a0098d22c1516bf9", "repo": "https://github.com/NassimF/latex-test-report", "updated": "2026-04-02"}
