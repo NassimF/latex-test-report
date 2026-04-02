@@ -73,5 +73,39 @@ merged with the remote repository's initial state.
 divergent histories. Both \texttt{README.md} (local) and \texttt{Readme.md} (remote) were
 retained due to case-sensitivity differences on the filesystem.
 
+% ──────────────────────────────────────────────────────────
+\subsection*{[2026-04-02] \texttt{fdc380f3} --- Update READMEs with skill installation instructions and add .gitignore}
+
+\textbf{Author:} Nasim Faridnia (\texttt{seyedehnasim.faridnia@my.utsa.edu}) \\[0.3em]
+\textbf{Files changed:}
+\begin{itemize}
+  \item \texttt{.gitignore} --- Created project-level gitignore to exclude LaTeX build artifacts and Claude Code session data
+  \item \texttt{Readme.md} --- Expanded with skill installation instructions and deployment guide
+\end{itemize}
+
+\vspace{0.3em}
+\textbf{Summary:} Added a \texttt{.gitignore} to prevent LaTeX build artifacts and the
+\texttt{.claude/} session directory from being tracked by git. Updated \texttt{Readme.md}
+with detailed installation instructions for the \texttt{/latex-report} skill, including
+how to deploy it to a new machine and configure the required hooks in \texttt{settings.json}.
+
+\vspace{0.5em}
+\textbf{Ignored patterns added:}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Pattern} & \textbf{Purpose} \\
+\midrule
+\texttt{*.aux}, \texttt{*.log}, \texttt{*.out} & LaTeX compilation logs and auxiliary files \\
+\texttt{*.toc} & Table of contents cache \\
+\texttt{*.pdf} & Compiled PDF output \\
+\texttt{*.synctex.gz} & SyncTeX editor synchronisation file \\
+\texttt{*.fdb\_latexmk}, \texttt{*.fls} & Latexmk build database and file list \\
+\texttt{.claude/} & Claude Code session and cache data \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \end{document}
-% LATEX-REPORT-STATE: {"last_commit": "6185e8595936531a2bbfa412ca6df92d05a007f3", "repo": "https://github.com/NassimF/latex-test-report", "updated": "2026-04-02"}
+% LATEX-REPORT-STATE: {"last_commit": "fdc380f3adbd6d1289defbca4a79ee666ae11930", "repo": "https://github.com/NassimF/latex-test-report", "updated": "2026-04-02"}
